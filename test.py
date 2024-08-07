@@ -19,12 +19,12 @@ while True:
     # send a high signal to the step pin to step the motor
     step_pin.high()
     # turn the LED on
-    led_pin.high()
+    led_pin.toggle()
     # pause to control the speed of the motor
     sleep_us(500)  # pause for 500 microseconds
     # send a low signal to the step pin to complete the step cycle
     step_pin.low()
     # turn the LED off
-    led_pin.low()
+    led_pin.toggle()
     # pause again to maintain the step speed
     sleep_us(500)  # pause for 500 microseconds
